@@ -40,5 +40,6 @@ export default {async fetch(request,env,ctx){const url=new URL(request.url),path
   return json({success:true});
  }
  if(path.startsWith('/api/'))return json({error:'Not found.'},404);
- const response=await env.ASSETS.fetch(request);const secured=new Response(response.body,response);secured.headers.set('X-Content-Type-Options','nosniff');secured.headers.set('Referrer-Policy','strict-origin-when-cross-origin');secured.headers.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');if(path==='/preview'||path.startsWith('/studio')){secured.headers.set('X-Robots-Tag','noindex, nofollow');secured.headers.set('Cache-Control','no-store');}return secured;
+ const assetRequest=path.startsWith('/studio/')&&!/\.[a-z0-9]+$/i.test(path)?new Request(new URL('/studio/',request.url),request):request;
+ const response=await env.ASSETS.fetch(assetRequest);const secured=new Response(response.body,response);secured.headers.set('X-Content-Type-Options','nosniff');secured.headers.set('Referrer-Policy','strict-origin-when-cross-origin');secured.headers.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');if(path==='/preview'||path.startsWith('/studio')){secured.headers.set('X-Robots-Tag','noindex, nofollow');secured.headers.set('Cache-Control','no-store');}return secured;
  }catch{return json({error:'Request could not be completed.'},500)}}};

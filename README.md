@@ -16,7 +16,7 @@ Use Node 24. Run `npm ci`, then `npm run dev`. Copy `.env.example` to `.env.loca
 
 The GitHub main branch is connected to Cloudflare Pages. A Pages deploy hook named **Sanity content publishing** exists. Connecting the corresponding Sanity webhook requires a project administrator with `sanity.project.webhooks/create`; it is not configured by the migration token. See `docs/deployment.md` for its filter. Without that hook, a GitHub change or a manually triggered Cloudflare deployment updates the static content.
 
-Authenticated draft preview is implemented at `/api/preview/`, using Sanity's preview URL validator and an HMAC-signed, HttpOnly cookie. It requires the `SANITY_READ_TOKEN` and `PREVIEW_SECRET` Cloudflare secrets. They have not been copied into Cloudflare without the user's explicit approval. Until configured, preview returns 503 and draft APIs return 401. The public bundle contains no credentials. Studio includes Presentation configuration; full visual click-to-edit overlays are a future enhancement. Drafts never appear in public GROQ queries.
+Authenticated draft preview is implemented at `/api/preview/`, using Sanity's preview URL validator and an HMAC-signed, HttpOnly cookie. It requires the `SANITY_READ_TOKEN` and `PREVIEW_SECRET` Cloudflare secrets. The user approved both secrets and they are configured in Cloudflare. End-to-end preview verification requires a signed-in Studio session. Unauthenticated draft APIs return 401. The public bundle contains no credentials. Studio includes Presentation configuration; full visual click-to-edit overlays are a future enhancement. Drafts never appear in public GROQ queries.
 
 ## Enquiries
 

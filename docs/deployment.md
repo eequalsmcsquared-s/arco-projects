@@ -8,7 +8,7 @@ Cloudflare Pages project: `arco-projects`. Production branch: `main`. Build comm
 
 ## Draft preview
 
-After approval, set `SANITY_READ_TOKEN` as a Cloudflare encrypted secret with Viewer access. Set `PREVIEW_SECRET` to at least 32 cryptographically random bytes. Do this for approved environments only. The read token remains server-side. No write token is required by the deployed website. Preview links are validated against Sanity, and cookies expire after one hour. Draft JSON uses no-store caching and requires the signed cookie.
+The owner approved the preview secrets, which are now configured in Cloudflare. For future environments, set `SANITY_READ_TOKEN` as a Cloudflare encrypted secret with Viewer access. Set `PREVIEW_SECRET` to at least 32 cryptographically random bytes. Do this for approved environments only. The read token remains server-side. No write token is required by the deployed website. Preview links are validated against Sanity, and cookies expire after one hour. Draft JSON uses no-store caching and requires the signed cookie.
 
 Studio's Presentation tool opens `/api/preview/` and redirects to `/preview/?path=/`. Draft content refreshes every five seconds. Draft mode is isolated from public routes. Use Exit preview to clear the cookie. Full visual-editing overlays and content-release perspectives are not part of the current custom preview implementation.
 
