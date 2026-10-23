@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+.sanity/
+dist/
+public/studio/
+*.tsbuildinfo
+audit/raw/

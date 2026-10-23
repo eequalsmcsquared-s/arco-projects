@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "name": "Form disabled without provider",
+      "status": 200
+    },
+    {
+      "name": "No email accepted while provider absent",
+      "status": 503
+    },
+    {
+      "name": "No cross-origin submission",
+      "status": 403
+    },
+    {
+      "name": "No unsigned draft access",
+      "status": 401
+    },
+    {
+      "name": "Preview unavailable without secrets",
+      "status": 503
+    },
+    {
+      "name": "Unknown endpoint returns 404",
+      "status": 404
+    },
+    {
+      "name": "Only POST may submit",
+      "status": 405
+    },
+    {
+      "name": "Large body rejected",
+      "status": 413
+    },
+    {
+      "name": "Honeypot rejected",
+      "status": 400
+    },
+    {
+      "name": "Malformed JSON rejected",
+      "status": 400
+    }
+  ],
+  "noLiveEmailSent": true,
+  "noEnquiryStored": true
+}

@@ -1,0 +1,4 @@
+import {createClient} from '@sanity/client';
+process.loadEnvFile('.env.local');
+const client=createClient({projectId:'aldhsy2i',dataset:'production',apiVersion:'2025-08-04',token:process.env.SANITY_WRITE_TOKEN,useCdn:false});
+try{const result=await client.request({method:'POST',url:'/hooks/projects/aldhsy2i',body:{type:'document',name:'Cloudflare Pages publishing',url:process.env.PAGES_DEPLOY_HOOK,dataset:'production',isDisabledByUser:false,apiVersion:'v2021-03-25',httpMethod:'POST',includeDrafts:false,includeAllVersions:false,rule:{on:['create','update','delete'],filter:'!(_id in path("drafts.**")) && !(_id in path("versions.**")) && !(_type in ["sanity.imageAsset", "sanity.fileAsset", "assetRecord"])',projection:'{_id, _type}'}}});console.log('Publishing webhook created:',result.id||result._id||'success');}catch(e){console.log('Publishing setup:',e.statusCode,e.message.replace(/https:\/\/[^\s]+/g,'[URL]'));process.exitCode=1;}

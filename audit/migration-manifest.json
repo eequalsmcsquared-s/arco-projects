@@ -1,0 +1,192 @@
+[
+  {
+    "existingUrl": "https://arcoprojects.co.nz/terms-conditions",
+    "title": "Terms & Conditions",
+    "type": "pages",
+    "newUrl": "/terms-conditions",
+    "sanityType": "page",
+    "status": "Migrated",
+    "images": [
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Group-4991.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-3.svg"
+    ],
+    "review": "Policy/claim wording retained in raw audit for owner review"
+  },
+  {
+    "existingUrl": "https://arcoprojects.co.nz/privacy-policy",
+    "title": "Privacy Policy",
+    "type": "pages",
+    "newUrl": "/privacy-policy",
+    "sanityType": "page",
+    "status": "Migrated",
+    "images": [
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Group-4991.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-3.svg"
+    ],
+    "review": "Policy/claim wording retained in raw audit for owner review"
+  },
+  {
+    "existingUrl": "https://arcoprojects.co.nz/faqs",
+    "title": "FAQs",
+    "type": "pages",
+    "newUrl": "/faqs",
+    "sanityType": "page",
+    "status": "Migrated",
+    "images": [
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Group-4991.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-3.svg"
+    ],
+    "review": "Policy/claim wording retained in raw audit for owner review"
+  },
+  {
+    "existingUrl": "https://arcoprojects.co.nz/services/home-extensions",
+    "title": "Home Extensions",
+    "type": "pages",
+    "newUrl": "/services/home-extensions",
+    "sanityType": "service",
+    "status": "Migrated",
+    "images": [
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/10/80aa9877-73bf-4187-bd54-f0ced8380452-scaled.jpg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-2.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Group-4991.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-3.svg"
+    ],
+    "review": ""
+  },
+  {
+    "existingUrl": "https://arcoprojects.co.nz/services/home-renovations",
+    "title": "Home Renovations",
+    "type": "pages",
+    "newUrl": "/services/home-renovations",
+    "sanityType": "service",
+    "status": "Migrated",
+    "images": [
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/09/458-adelaide-2-1.webp",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Group-4991.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-3.svg"
+    ],
+    "review": ""
+  },
+  {
+    "existingUrl": "https://arcoprojects.co.nz/services/new-builds",
+    "title": "New Builds",
+    "type": "pages",
+    "newUrl": "/services/new-builds",
+    "sanityType": "service",
+    "status": "Migrated",
+    "images": [
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/09/20240606_145452.webp",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-2.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Group-4991.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-3.svg"
+    ],
+    "review": "Policy/claim wording retained in raw audit for owner review"
+  },
+  {
+    "existingUrl": "https://arcoprojects.co.nz/services",
+    "title": "Services",
+    "type": "pages",
+    "newUrl": "/services",
+    "sanityType": "page",
+    "status": "Migrated",
+    "images": [
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/09/458-Adelaide-1.jpg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/10/eb52dd10-c55b-4d7f-a024-177388d1624a-scaled.webp",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/09/458-adelaide-2.webp",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/10/80aa9877-73bf-4187-bd54-f0ced8380452-scaled.jpg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Group-4991.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-3.svg"
+    ],
+    "review": ""
+  },
+  {
+    "existingUrl": "https://arcoprojects.co.nz/about",
+    "title": "About",
+    "type": "pages",
+    "newUrl": "/about",
+    "sanityType": "page",
+    "status": "Migrated",
+    "images": [
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/09/20220812_163015.webp",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-2.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/09/Rectangle-1-5.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/09/Rectangle-2-5.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/09/Rectangle-3-1.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/09/Rectangle-4.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Group-4991.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-3.svg"
+    ],
+    "review": ""
+  },
+  {
+    "existingUrl": "https://arcoprojects.co.nz/contact",
+    "title": "Contact",
+    "type": "pages",
+    "newUrl": "/contact",
+    "sanityType": "page",
+    "status": "Migrated",
+    "images": [
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Group-4991.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-3.svg"
+    ],
+    "review": ""
+  },
+  {
+    "existingUrl": "https://arcoprojects.co.nz/blog",
+    "title": "Blog",
+    "type": "pages",
+    "newUrl": "/projects/",
+    "sanityType": "page",
+    "status": "Excluded empty content; 301 redirect",
+    "images": [
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Group-4991.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-3.svg"
+    ],
+    "review": ""
+  },
+  {
+    "existingUrl": "https://arcoprojects.co.nz/",
+    "title": "Home",
+    "type": "pages",
+    "newUrl": "/",
+    "sanityType": "homepage",
+    "status": "Migrated",
+    "images": [
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-1.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/10/y-k-vUjNvqwf7qs-unsplash.webp",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/10/eb52dd10-c55b-4d7f-a024-177388d1624a-scaled.webp",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/09/458-adelaide-2.webp",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/10/80aa9877-73bf-4187-bd54-f0ced8380452-scaled.jpg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-2.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Group-4991.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-3.svg"
+    ],
+    "review": ""
+  },
+  {
+    "existingUrl": "https://arcoprojects.co.nz/project/test-project",
+    "title": "Test Project",
+    "type": "project",
+    "newUrl": "/projects/",
+    "sanityType": "page",
+    "status": "Excluded empty content; 301 redirect",
+    "images": [
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector.svg",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Rectangle-1-1.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Group-4991.png",
+      "https://arcoprojects.co.nz/wp-content/uploads/2024/08/Vector-3.svg"
+    ],
+    "review": ""
+  }
+]

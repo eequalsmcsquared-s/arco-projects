@@ -1,0 +1,259 @@
+{
+  "date": "2026-10-23T06:27:32.302Z",
+  "base": "http://127.0.0.1:4387",
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/",
+      "title": "Wellington Builders | New Homes & Renovations | Arco Projects",
+      "violations": []
+    },
+    {
+      "route": "/projects/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/projects/",
+      "title": "Our work | Arco Projects",
+      "violations": []
+    },
+    {
+      "route": "/services/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/services/",
+      "title": "Services | Arco Projects",
+      "violations": []
+    },
+    {
+      "route": "/services/new-builds/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/services/new-builds/",
+      "title": "New builds Wellington | Arco Projects",
+      "violations": []
+    },
+    {
+      "route": "/services/home-renovations/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/services/home-renovations/",
+      "title": "Home renovations Wellington | Arco Projects",
+      "violations": []
+    },
+    {
+      "route": "/services/home-extensions/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/services/home-extensions/",
+      "title": "Home extensions Wellington | Arco Projects",
+      "violations": []
+    },
+    {
+      "route": "/about/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/about/",
+      "title": "About Arco Projects | Arco Projects",
+      "violations": []
+    },
+    {
+      "route": "/our-process/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/our-process/",
+      "title": "Our process | Arco Projects",
+      "violations": []
+    },
+    {
+      "route": "/faqs/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/faqs/",
+      "title": "Frequently asked questions | Arco Projects",
+      "violations": []
+    },
+    {
+      "route": "/contact/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/contact/",
+      "title": "Let’s talk about your home. | Arco Projects",
+      "violations": []
+    },
+    {
+      "route": "/privacy-policy/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/privacy-policy/",
+      "title": "Privacy policy | Arco Projects",
+      "violations": []
+    },
+    {
+      "route": "/terms-conditions/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/terms-conditions/",
+      "title": "Terms and conditions | Arco Projects",
+      "violations": []
+    },
+    {
+      "route": "/thank-you/",
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "missingAlt": 0,
+      "brokenImages": [],
+      "oldHostImages": 0,
+      "forbiddenText": false,
+      "canonical": "https://arco-projects.pages.dev/thank-you/",
+      "title": "Thank you for getting in touch. | Arco Projects",
+      "violations": []
+    }
+  ],
+  "responsive": [
+    {
+      "width": 320,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "route": "/contact/",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "route": "/services/home-renovations/",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "route": "/contact/",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "route": "/services/home-renovations/",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/contact/",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/services/home-renovations/",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "/contact/",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "route": "/services/home-renovations/",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/contact/",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/services/home-renovations/",
+      "overflow": false
+    }
+  ],
+  "keyboard": {
+    "mobileMenu": true,
+    "menuCloses": true,
+    "faqKeyboard": true
+  },
+  "brokenLinks": [],
+  "browserErrors": []
+}

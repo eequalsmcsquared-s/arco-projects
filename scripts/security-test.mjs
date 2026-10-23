@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';import fs from 'node:fs/promises';
+const code=await fs.readFile('out/_worker.js','utf8');const {default:worker}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const base='https://arco-projects.pages.dev';const request=(path,options)=>new Request(base+path,options);const checks=[];
+const test=async(name,path,options,env,status)=>{const r=await worker.fetch(request(path,options),env,{});assert.equal(r.status,status,name);checks.push({name,status:r.status})};
+await test('Form disabled without provider','/api/form-status/',{}, {},200);
+const status=await worker.fetch(request('/api/form-status/'),{},{});assert.equal((await status.json()).enabled,false);
+await test('No email accepted while provider absent','/api/enquiry/',{method:'POST',headers:{Origin:base,'Content-Type':'application/json'},body:'{}'}, {},503);
+await test('No cross-origin submission','/api/enquiry/',{method:'POST',headers:{Origin:'https://other.example','Content-Type':'application/json'},body:'{}'}, {},403);
+await test('No unsigned draft access','/api/draft-content/',{}, {},401);
+await test('Preview unavailable without secrets','/api/preview/',{}, {},503);
+await test('Unknown endpoint returns 404','/api/not-real/',{}, {},404);
+await test('Only POST may submit','/api/enquiry/',{}, {},405);
+const env={RESEND_API_KEY:'test',ENQUIRY_FROM:'test@example.invalid',ENQUIRY_TO:'test@example.invalid',TURNSTILE_SECRET_KEY:'test',TURNSTILE_SITE_KEY:'test',FORM_LIMITS:{},PREVIEW_SECRET:'test-only'};
+await test('Large body rejected','/api/enquiry/',{method:'POST',headers:{Origin:base,'Content-Type':'application/json','Content-Length':'20000'},body:'{}'},env,413);
+await test('Honeypot rejected','/api/enquiry/',{method:'POST',headers:{Origin:base,'Content-Type':'application/json'},body:JSON.stringify({website:'spam',started:Date.now()-5000})},env,400);
+await test('Malformed JSON rejected','/api/enquiry/',{method:'POST',headers:{Origin:base,'Content-Type':'application/json'},body:'not json'},env,400);
+await fs.writeFile('audit/security-results.json',JSON.stringify({checks,noLiveEmailSent:true,noEnquiryStored:true},null,2));console.log(`${checks.length} security checks passed. No live email sent or enquiry stored.`);
