@@ -1,6 +1,7 @@
 import {createClient} from '@sanity/client';
 import {validatePreviewUrl} from '@sanity/preview-url-secret';
 import {SITE_QUERY} from '../lib/content';
+import {enquiryEmail} from './email-template.mjs';
 const projectId='aldhsy2i',dataset='production';
 const json=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
 const encoder=new TextEncoder();
@@ -32,10 +33,12 @@ export default {async fetch(request,env,ctx){const url=new URL(request.url),path
   if(input.website||typeof input.started!=='number'||Date.now()-input.started<3000||Date.now()-input.started>86400000)return json({error:'Invalid request.'},400);
   const ip=request.headers.get('CF-Connecting-IP')||'unknown';const hash=await sign(ip,env.PREVIEW_SECRET);const bucket=`security:${hash}:${Math.floor(Date.now()/600000)}`;const count=Number(await env.FORM_LIMITS.get(bucket)||0);if(count>=5)return json({error:'Please wait before trying again.'},429);await env.FORM_LIMITS.put(bucket,String(count+1),{expirationTtl:660});
   const {success,hostname}=await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify',{method:'POST',body:new URLSearchParams({secret:env.TURNSTILE_SECRET_KEY,response:String(input.turnstile||''),remoteip:ip}),signal:AbortSignal.timeout(10000)}).then(r=>r.json());if(!success||hostname!==url.hostname)return json({error:'Verification failed.'},400);
-  const form=await sanity(env).fetch('*[_type=="enquiryForm"][0]{fields[]{name,label,required,kind,options}}');const rows=[];
-  for(const f of form.fields||[]){const v=input[f.name];if(v!==undefined&&typeof v!=='string')return json({error:'Invalid field.'},400);const value=(v||'').trim();if(value.length>(f.kind==='textarea'?5000:300))return json({error:'Field too long.'},400);if(f.required&&!value)return json({error:'Missing required field.'},400);if(f.kind==='email'&&value&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))return json({error:'Invalid email.'},400);if(f.kind==='select'&&value&&!f.options?.includes(value))return json({error:'Invalid option.'},400);rows.push(`${f.label}: ${value}`);}
+  const form=await sanity(env).fetch('*[_type=="enquiryForm"][0]{demoMode,fields[]{name,label,required,kind,options}}');const rows=[];
+  if(form.demoMode)return json({error:'This is a demo. No enquiry has been sent.'},409);
+  for(const f of form.fields||[]){const v=input[f.name];if(v!==undefined&&typeof v!=='string')return json({error:'Invalid field.'},400);const value=(v||'').trim();if(value.length>(f.kind==='textarea'?5000:300))return json({error:'Field too long.'},400);if(f.required&&!value)return json({error:'Missing required field.'},400);if(f.kind==='email'&&value&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))return json({error:'Invalid email.'},400);if(f.kind==='select'&&value&&!f.options?.includes(value))return json({error:'Invalid option.'},400);rows.push({label:f.label,value});}
   if(input.consent!=='yes')return json({error:'Consent required.'},400);
-  const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({from:env.ENQUIRY_FROM,to:[env.ENQUIRY_TO],reply_to:input.email,subject:'Website consultation enquiry',text:rows.join('\n\n')+'\n\nConsent: agreed to contact about this enquiry.'}),signal:AbortSignal.timeout(15000)});
+  const branding=await sanity(env).fetch('*[_type=="siteSettings"][0]{title,emailLogoUrl}');const email=enquiryEmail({companyName:branding?.title||'Arco Projects',logoUrl:branding?.emailLogoUrl||new URL('/email/arco-logo.png',url.origin).href,rows});
+  const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({from:env.ENQUIRY_FROM,to:[env.ENQUIRY_TO],reply_to:input.email,subject:'Website consultation enquiry',text:email.text,html:email.html}),signal:AbortSignal.timeout(15000)});
   if(!response.ok)return json({error:'Email delivery failed. Please contact the team directly.'},502);
   return json({success:true});
  }

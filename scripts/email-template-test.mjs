@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import {enquiryEmail} from '../cloudflare/email-template.mjs';
+const email=enquiryEmail({companyName:'Arco Projects',logoUrl:'https://arco-projects.pages.dev/email/arco-logo.png',rows:[{label:'Name',value:'Demo visitor'},{label:'Project details',value:'Kitchen renovation\n<script>alert("test")</script>'},{label:'Email',value:'demo@example.invalid'}]});
+assert.ok(email.html.includes('src="https://arco-projects.pages.dev/email/arco-logo.png"'));
+assert.ok(email.html.includes('alt="Arco Projects"'));
+assert.ok(email.html.includes('&lt;script&gt;'));
+assert.ok(!email.html.includes('<script>'));
+assert.ok(email.text.includes('Kitchen renovation'));
+await fs.mkdir('audit/email-preview',{recursive:true});
+await fs.writeFile('audit/email-preview/enquiry.html',email.html);
+console.log('Email logo, HTML escaping and plain-text alternative checked. No email sent.');
